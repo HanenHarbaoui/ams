@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Training Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #ecf0f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Full Stack Developer Training</h1>
+        <p>This training program is designed to equip you with the essential skills and knowledge to become a proficient Full Stack Developer. You will gain hands-on experience in both frontend and backend development.</p>
+        
+        <h2>Training Modules</h2>
+        <ul>
+            <li><strong>Module 1:</strong> Introduction to Web Development</li>
+            <li><strong>Module 2:</strong> HTML, CSS, and JavaScript Fundamentals</li>
+            <li><strong>Module 3:</strong> Frontend Frameworks - Angular</li>
+            <li><strong>Module 4:</strong> Backend Development with Spring Boot</li>
+            <li><strong>Module 5:</strong> RESTful API Development</li>
+            <li><strong>Module 6:</strong> Database Management - MySQL</li>
+            <li><strong>Module 7:</strong> Version Control with Git</li>
+            <li><strong>Module 8:</strong> CI/CD with Jenkins and Docker</li>
+         <h2>Liste des étudiants</h2> 
+          <ul>
+            <li th:each="name:${names}"th:text="${name}"></li> 
+            </ul>
+            <h2>tableau des fournisseurs</h2>
+            <table align="center" border="1">
+				<tr><th>Nom</th><th>Adresse</th><th>Mobile</th></tr>
+				<tr th:each="provider :${providers}">
+				<td th:text="${provider.name}"	></td>
+				<td th:text="${provider.adress}"	></td>
+				<td th:text="${provider.phone}"	></td>
+				</tr>
+			</table>
